@@ -1,0 +1,801 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <include
+        android:id="@+id/topbar"
+        layout="@layout/topbar_normal" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottomLayout"
+        android:layout_below="@+id/topbar"
+        android:visibility="visible" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/padding_arround3"
+                android:paddingRight="@dimen/padding_arround3"
+                android:paddingTop="@dimen/padding_arround3"
+                android:visibility="visible" >
+
+                <ProgressBar
+                    android:id="@+id/profileProgressBar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:indeterminate="false"
+                    android:maxHeight="5dip"
+                    android:minHeight="5dip"
+                    android:progress="10"
+                    android:progressDrawable="@drawable/yellow_progress" />
+
+                <TextView
+                    android:id="@+id/profileProgressTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginTop="@dimen/padding_arround1"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:text="10% Completed"
+                    android:textColor="@color/spinner_text"
+                    android:textSize="@dimen/font_6"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <com.paulavasile.dineunite.views.CircleImageView
+                android:id="@+id/profilePhotoIv"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/padding_arround3"
+                android:src="@drawable/profile_placeholder"
+                app:border_color="#aaa"
+                app:border_width="3dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/padding_arround3"
+                    android:paddingRight="@dimen/padding_arround3"
+                    android:paddingTop="@dimen/padding_arround3"
+                    android:visibility="visible" >
+
+                    <TextView
+                        android:id="@+id/personalInfoTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="marquee"
+                        android:gravity="center_vertical"
+                        android:singleLine="true"
+                        android:text="Personal Information"
+                        android:textAllCaps="true"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/font_5"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/grey" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/padding_arround3"
+                    android:paddingRight="@dimen/padding_arround3"
+                    android:paddingTop="@dimen/padding_arround3"
+                    android:visibility="visible" >
+
+                    <TextView
+                        android:id="@+id/firstNameTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="marquee"
+                        android:gravity="center_vertical"
+                        android:singleLine="true"
+                        android:text="First name"
+                        android:textAllCaps="true"
+                        android:textColor="@color/item_title"
+                        android:textSize="@dimen/font_6"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/firstNameValueTv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="marquee"
+                        android:gravity="center_vertical"
+                        android:padding="8dip"
+                        android:singleLine="true"
+                        android:hint="@string/hint_add"
+                        android:textColor="@color/font_color_input"
+                        android:textSize="@dimen/font_5" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/separator" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/padding_arround3"
+                    android:paddingRight="@dimen/padding_arround3"
+                    android:paddingTop="@dimen/padding_arround3"
+                    android:visibility="visible" >
+
+                    <TextView
+                        android:id="@+id/lastNameTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="marquee"
+                        android:gravity="center_vertical"
+                        android:singleLine="true"
+                        android:text="Last name"
+                        android:textAllCaps="true"
+                        android:textColor="@color/item_title"
+                        android:textSize="@dimen/font_6"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/lastNameValueTv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="marquee"
+                        android:gravity="center_vertical"
+                        android:padding="8dip"
+                        android:singleLine="true"
+                        android:hint="@string/hint_add"
+                        android:textColor="@color/font_color_input"
+                        android:textSize="@dimen/font_5" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/separator" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/padding_arround3"
+                    android:paddingRight="@dimen/padding_arround3"
+                    android:paddingTop="@dimen/padding_arround3"
+                    android:visibility="visible" >
+
+                    <TextView
+                        android:id="@+id/genderTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="marquee"
+                        android:gravity="center_vertical"
+                        android:singleLine="true"
+                        android:text="Gender"
+                        android:textAllCaps="true"
+                        android:textColor="@color/item_title"
+                        android:textSize="@dimen/font_6"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/genderValueTv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="marquee"
+                        android:gravity="center_vertical"
+                        android:padding="8dip"
+                        android:singleLine="true"
+                        android:hint="@string/hint_select"
+                        android:textColor="@color/font_color_input"
+                        android:textSize="@dimen/font_5" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/separator" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/padding_arround3"
+                    android:paddingRight="@dimen/padding_arround3"
+                    android:paddingTop="@dimen/padding_arround3"
+                    android:visibility="visible" >
+
+                    <TextView
+                        android:id="@+id/ageTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="marquee"
+                        android:gravity="center_vertical"
+                        android:singleLine="true"
+                        android:text="Birthday"
+                        android:textAllCaps="true"
+                        android:textColor="@color/item_title"
+                        android:textSize="@dimen/font_6"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/ageValueTv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="marquee"
+                        android:gravity="center_vertical"
+                        android:padding="8dip"
+                        android:singleLine="true"
+                        android:hint="@string/hint_add"
+                        android:textColor="@color/font_color_input"
+                        android:textSize="@dimen/font_5" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/separator" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/padding_arround3"
+                    android:paddingRight="@dimen/padding_arround3"
+                    android:paddingTop="@dimen/padding_arround3"
+                    android:visibility="visible" >
+
+                    <TextView
+                        android:id="@+id/aboutYouTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="marquee"
+                        android:gravity="center_vertical"
+                        android:singleLine="true"
+                        android:text="About you"
+                        android:textAllCaps="true"
+                        android:textColor="@color/item_title"
+                        android:textSize="@dimen/font_6"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/aboutYouValueTv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="marquee"
+                        android:gravity="center_vertical"
+                        android:padding="8dip"
+                        android:hint="@string/hint_add"
+                        android:maxLength="200"
+                        android:textColor="@color/font_color_input"
+                        android:textSize="@dimen/font_5" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/separator" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/padding_arround3"
+                    android:paddingRight="@dimen/padding_arround3"
+                    android:paddingTop="@dimen/padding_arround3"
+                    android:visibility="visible" >
+
+                    <TextView
+                        android:id="@+id/relationShipTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="marquee"
+                        android:gravity="center_vertical"
+                        android:singleLine="true"
+                        android:text="@string/relationship_status_title"
+                        android:textAllCaps="true"
+                        android:textColor="@color/item_title"
+                        android:textSize="@dimen/font_6"
+                        android:textStyle="bold" />
+
+                    <com.paulavasile.dineunite.views.CustomSpinner
+                        android:id="@+id/relationshipStatusList"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:gravity="center"
+                        android:hint="@string/hint_select"
+                        android:paddingBottom="@dimen/padding_arround1"
+                        android:paddingTop="@dimen/padding_arround1" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/separator" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/padding_arround3"
+                    android:paddingRight="@dimen/padding_arround3"
+                    android:paddingTop="@dimen/padding_arround3"
+                    android:visibility="visible" >
+
+                    <TextView
+                        android:id="@+id/lookingForTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="marquee"
+                        android:gravity="center_vertical"
+                        android:singleLine="true"
+                        android:text="@string/user_is_lookingfor_title"
+                        android:textAllCaps="true"
+                        android:textColor="@color/item_title"
+                        android:textSize="@dimen/font_6"
+                        android:textStyle="bold" />
+
+                    <com.paulavasile.dineunite.views.CustomSpinner
+                        android:id="@+id/lookingForList"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:gravity="center"
+                        android:hint="@string/hint_select"
+                        android:paddingBottom="@dimen/padding_arround1"
+                        android:paddingTop="@dimen/padding_arround1" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/separator" />
+                </LinearLayout>
+				
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/padding_arround3"
+                    android:paddingRight="@dimen/padding_arround3"
+                    android:paddingTop="@dimen/padding_arround3"
+                    android:visibility="visible" >
+
+                    <TextView
+                        android:id="@+id/favouriteCuisineTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="marquee"
+                        android:gravity="center_vertical"
+                        android:singleLine="true"
+                        android:text="@string/favourite_cuisine_title"
+                        android:textAllCaps="true"
+                        android:textColor="@color/item_title"
+                        android:textSize="@dimen/font_6"
+                        android:textStyle="bold" />
+
+                    <com.paulavasile.dineunite.views.CustomSpinner
+                        android:id="@+id/favouriteCuisineList"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:gravity="center"
+                        android:hint="@string/hint_select"
+                        android:paddingBottom="@dimen/padding_arround1"
+                        android:paddingTop="@dimen/padding_arround1" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/separator" />
+                </LinearLayout>
+                
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/padding_arround3"
+                    android:paddingRight="@dimen/padding_arround3"
+                    android:paddingTop="@dimen/padding_arround3"
+                    android:visibility="visible" >
+
+                    <TextView
+                        android:id="@+id/ethnicityTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="marquee"
+                        android:gravity="center_vertical"
+                        android:singleLine="true"
+                        android:text="@string/ethnicity_title"
+                        android:textAllCaps="true"
+                        android:textColor="@color/item_title"
+                        android:textSize="@dimen/font_6"
+                        android:textStyle="bold" />
+
+                    <com.paulavasile.dineunite.views.CustomSpinner
+                        android:id="@+id/ethnicityList"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:gravity="center"
+                        android:hint="@string/hint_select"
+                        android:paddingBottom="@dimen/padding_arround1"
+                        android:paddingTop="@dimen/padding_arround1" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/separator" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/padding_arround3"
+                    android:paddingRight="@dimen/padding_arround3"
+                    android:paddingTop="@dimen/padding_arround3"
+                    android:visibility="visible" >
+
+                    <TextView
+                        android:id="@+id/languageTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="marquee"
+                        android:gravity="center_vertical"
+                        android:singleLine="true"
+                        android:text="@string/languages_title"
+                        android:textAllCaps="true"
+                        android:textColor="@color/item_title"
+                        android:textSize="@dimen/font_6"
+                        android:textStyle="bold" />
+
+                    <com.paulavasile.dineunite.views.CustomSpinner
+                        android:id="@+id/languageList"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:gravity="center"
+                        android:hint="@string/hint_select"
+                        android:paddingBottom="@dimen/padding_arround1"
+                        android:paddingTop="@dimen/padding_arround1" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/separator" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/padding_arround3"
+                    android:paddingRight="@dimen/padding_arround3"
+                    android:paddingTop="@dimen/padding_arround3"
+                    android:visibility="visible" >
+
+                    <TextView
+                        android:id="@+id/educationTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="marquee"
+                        android:gravity="center_vertical"
+                        android:singleLine="true"
+                        android:text="@string/education_title"
+                        android:textAllCaps="true"
+                        android:textColor="@color/item_title"
+                        android:textSize="@dimen/font_6"
+                        android:textStyle="bold" />
+
+                    <com.paulavasile.dineunite.views.CustomSpinner
+                        android:id="@+id/educationList"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:gravity="center"
+                        android:hint="@string/hint_select"
+                        android:paddingBottom="@dimen/padding_arround1"
+                        android:paddingTop="@dimen/padding_arround1" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/separator" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/padding_arround3"
+                    android:paddingRight="@dimen/padding_arround3"
+                    android:paddingTop="@dimen/padding_arround3"
+                    android:visibility="visible" >
+
+                    <TextView
+                        android:id="@+id/contactInfoTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="marquee"
+                        android:gravity="center_vertical"
+                        android:singleLine="true"
+                        android:text="Contact Information"
+                        android:textAllCaps="true"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/font_5"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/grey" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/padding_arround3"
+                    android:paddingRight="@dimen/padding_arround3"
+                    android:paddingTop="@dimen/padding_arround3"
+                    android:visibility="visible" >
+
+                    <TextView
+                        android:id="@+id/emailTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="marquee"
+                        android:gravity="center_vertical"
+                        android:singleLine="true"
+                        android:text="Email"
+                        android:textAllCaps="true"
+                        android:textColor="@color/item_title"
+                        android:textSize="@dimen/font_6"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/emailValueTv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="marquee"
+                        android:gravity="center_vertical"
+                        android:padding="8dip"
+                        android:singleLine="true"
+                        android:hint="@string/hint_add"
+                        android:textColor="@color/font_color_input"
+                        android:textSize="@dimen/font_5" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/separator" />
+                </LinearLayout>
+                
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/padding_arround3"
+                    android:paddingRight="@dimen/padding_arround3"
+                    android:paddingTop="@dimen/padding_arround3"
+                    android:visibility="visible" >
+
+                    <TextView
+                        android:id="@+id/mobileTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="marquee"
+                        android:gravity="center_vertical"
+                        android:singleLine="true"
+                        android:text="Mobile number"
+                        android:textAllCaps="true"
+                        android:textColor="@color/item_title"
+                        android:textSize="@dimen/font_6"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/mobileValueTv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="marquee"
+                        android:gravity="center_vertical"
+                        android:padding="8dip"
+                        android:singleLine="true"
+                        android:hint="@string/hint_add"
+                        android:textColor="@color/font_color_input"
+                        android:textSize="@dimen/font_5" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/separator" />
+                </LinearLayout>
+            </LinearLayout>
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/padding_arround3"
+                    android:paddingRight="@dimen/padding_arround3"
+                    android:paddingTop="@dimen/padding_arround3"
+                    android:visibility="visible" >
+
+                    <TextView
+                        android:id="@+id/locationInfoTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="marquee"
+                        android:gravity="center_vertical"
+                        android:singleLine="true"
+                        android:text="Location Information"
+                        android:textAllCaps="true"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/font_5"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/grey" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/padding_arround3"
+                    android:paddingRight="@dimen/padding_arround3"
+                    android:paddingTop="@dimen/padding_arround3"
+                    android:visibility="visible" >
+
+                    <TextView
+                        android:id="@+id/homeAddressTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="marquee"
+                        android:gravity="center_vertical"
+                        android:singleLine="true"
+                        android:text="Home address"
+                        android:textAllCaps="true"
+                        android:textColor="@color/item_title"
+                        android:textSize="@dimen/font_6"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/homeAddressValueTv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="marquee"
+                        android:gravity="center_vertical"
+                        android:padding="8dip"
+                        android:maxLines="2"
+                        android:hint="@string/hint_add"
+                        android:textColor="@color/font_color_input"
+                        android:textSize="@dimen/font_5" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/separator" />
+                </LinearLayout>
+                
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/padding_arround3"
+                    android:paddingRight="@dimen/padding_arround3"
+                    android:paddingTop="@dimen/padding_arround3"
+                    android:visibility="visible" >
+
+                    <TextView
+                        android:id="@+id/workAddressTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="marquee"
+                        android:gravity="center_vertical"
+                        android:singleLine="true"
+                        android:text="Work address"
+                        android:textAllCaps="true"
+                        android:textColor="@color/item_title"
+                        android:textSize="@dimen/font_6"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/workAddressValueTv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="marquee"
+                        android:gravity="center_vertical"
+                        android:padding="8dip"
+                        android:maxLines="2"
+                        android:hint="@string/hint_add"
+                        android:textColor="@color/font_color_input"
+                        android:textSize="@dimen/font_5" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/separator" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/bottomLayout">
+        <Button
+            android:id="@+id/btnSaveChanges"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            android:layout_marginBottom="@dimen/padding_arround2"
+            android:layout_marginLeft="@dimen/padding_arround4"
+            android:layout_marginRight="@dimen/padding_arround4"
+            android:layout_marginTop="10dp"
+            android:textSize="@dimen/font_40"
+            android:background="@drawable/btn_login"
+            android:text="@string/save_changes"
+            android:textColor="@color/white"
+            android:layout_weight="1"/>
+        <Button
+            android:id="@+id/btnCancelBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            android:layout_marginBottom="@dimen/padding_arround2"
+            android:layout_marginLeft="@dimen/padding_arround4"
+            android:layout_marginRight="@dimen/padding_arround4"
+            android:layout_marginTop="10dp"
+            android:textSize="@dimen/font_40"
+            android:background="@drawable/btn_cancel_event"
+            android:text="@string/cancel"
+            android:textColor="@color/white"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

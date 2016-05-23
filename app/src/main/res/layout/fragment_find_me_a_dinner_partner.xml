@@ -1,0 +1,66 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/topbar" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="@dimen/padding_arround4" >
+
+            <com.paulavasile.dineunite.views.ResizableImageView
+                android:layout_width="140dip"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_logo" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_arround4"
+                android:background="@drawable/back_options"
+                android:orientation="vertical"
+                android:padding="@dimen/padding_arround4" >
+
+                <RadioButton
+                    android:id="@+id/inviteGuestChk"
+                    style="@style/RadioButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/padding_arround5"
+                    android:text="@string/invite_guest" />
+
+                <RadioButton
+                    android:id="@+id/findTableChk"
+                    style="@style/RadioButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/padding_arround4"
+                    android:paddingLeft="@dimen/padding_arround5"
+                    android:checked="true"
+                    android:text="@string/find_table" />
+            </RadioGroup>
+
+            <Button
+                android:id="@+id/btnContinue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/padding_arround4"
+                android:layout_marginRight="@dimen/padding_arround4"
+                android:layout_marginTop="@dimen/padding_arround4"
+                android:background="@drawable/btn_login"
+                android:text="@string/continue_title"
+                android:textSize="@dimen/font_3"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </FrameLayout>
+
+</RelativeLayout>

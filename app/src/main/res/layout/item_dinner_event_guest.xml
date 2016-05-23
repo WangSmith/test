@@ -1,0 +1,133 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/padding_arround2"
+    android:paddingRight="@dimen/padding_arround2"
+    android:paddingTop="@dimen/padding_arround2" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/guestPictureIv"
+            android:layout_width="80dip"
+            android:layout_height="80dip"
+            android:scaleType="centerCrop" />
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/padding_arround2"
+            android:layout_weight="0.1"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/guestNameTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="marquee"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:text="Andrea L"
+                android:textColor="@color/item_content"
+                android:textSize="@dimen/font_40"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/guestAgeTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dip"
+                android:drawablePadding="@dimen/padding_arround1"
+                android:ellipsize="marquee"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:text="19 years old"
+                android:textColor="@color/item_content"
+                android:textSize="@dimen/font_40" />
+
+            <TextView
+                android:id="@+id/relationshipStatusNameTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dip"
+                android:ellipsize="marquee"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:text="single"
+                android:textColor="@color/item_content"
+                android:textSize="@dimen/font_40" />
+
+            <TextView
+                android:id="@+id/lookingForNameTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dip"
+                android:ellipsize="marquee"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:text="Looking for friendship"
+                android:textColor="@color/item_content"
+                android:textSize="@dimen/font_40" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/statusTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/padding_arround1"
+        android:ellipsize="marquee"
+        android:gravity="center_vertical"
+        android:singleLine="true"
+        android:text="Accepted"
+        android:textColor="@color/item_content"
+        android:textSize="@dimen/font_40"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/buttonActions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/padding_arround1"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <Button
+            android:id="@+id/declineBtn"
+            android:layout_width="125dip"
+            android:layout_height="match_parent"
+            android:background="@drawable/btn_invite_guests"
+            android:gravity="center"
+            android:minHeight="30dip"
+            android:text="DECLINE"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_8" />
+
+        <Button
+            android:id="@+id/acceptBtn"
+            android:layout_width="125dip"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/padding_arround1"
+            android:background="@drawable/btn_cancel_event"
+            android:gravity="center"
+            android:minHeight="30dip"
+            android:text="ACCEPT"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_8" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/separator"
+        android:visibility="gone" />
+
+</LinearLayout>

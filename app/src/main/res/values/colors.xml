@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="mdtp_white">#ffffff</color>
+    <color name="mdtp_background_color">@color/mdtp_white</color>
+    <color name="mdtp_circle_background">@color/mdtp_background_color</color>
+    <color name="mdtp_circle_color">#f5f5f5</color>
+    <color name="mdtp_ampm_text_color">@color/mdtp_numbers_text_color</color>
+    <color name="mdtp_numbers_text_color">#ff212121</color>
+
+    <color name="mdtp_transparent_black">#7f000000</color>
+    <color name="mdtp_accent_color">#009688</color>
+    <color name="mdtp_accent_color_focused">#76ffffff</color>
+    <color name="mdtp_accent_color_dark">#00796b</color>
+    <color name="mdtp_date_picker_text_normal">#ff212121</color>
+    <color name="mdtp_date_picker_text_highlighted">@color/mdtp_date_picker_text_normal</color>
+    <color name="mdtp_date_picker_text_disabled">#ccc</color>
+    <color name="mdtp_date_picker_month_day">#767676</color>
+
+    <!-- DatePicker Dark Theme -->
+    <color name="mdtp_date_picker_view_animator_dark_theme">@color/mdtp_light_gray</color>
+    <color name="mdtp_date_picker_text_normal_dark_theme">@color/mdtp_white</color>
+    <color name="mdtp_date_picker_month_day_dark_theme">#b4b4b4</color>
+    <color name="mdtp_date_picker_text_disabled_dark_theme">#767676</color>
+    <color name="mdtp_date_picker_text_highlighted_dark_theme">@color/mdtp_date_picker_text_normal_dark_theme</color>
+
+    <color name="mdtp_date_picker_view_animator">@android:color/white</color>
+
+    <color name="mdtp_button_color">@color/mdtp_accent_color</color>
+    <color name="mdtp_button_selected">#33969696</color>
+
+    <!-- TimePicker Dark Theme -->
+    <color name="mdtp_circle_background_dark_theme">#525252</color>
+    <color name="mdtp_calendar_header">@color/mdtp_accent_color_dark</color>
+
+    <!-- Colors for red theme -->
+    <color name="mdtp_light_gray">#424242</color>
+
+    <color name="white">#ffffffff</color>
+    <color name="black">#ff000000</color>
+    <color name="grey">#ff808080</color>
+    <color name="green">#ff027221</color>
+
+    <color name="transparent">#00000000</color>
+
+
+    <color name="font_color_input">#ff505253</color>
+    <color name="edit_hint_color">#bebebe</color>
+    
+    <color name="separator">#c0c0c0</color>
+
+    <color name="top_bar_color">#52667f</color>
+    <color name="menu_color_sel">#334961</color>
+    <color name="menu_color_mark">#fff58220</color>
+    
+    <color name="top_bar_separator">#173185</color>
+  
+    <color name="item_title">#f58220</color>
+    <color name="item_content">#9a9a9a</color>
+    <color name="item_status_expired">#51677e</color>
+    <color name="item_joined_status">#83c92b</color>
+    <color name="item_cancel_status">#a0000b</color>
+    
+    
+    <color name="spinner_back">#ffffffff</color>
+    <color name="spinner_back_sel">#ffffffff</color>
+    <color name="spinner_back_pressed">#08f58220</color>
+    <color name="spinner_text">#ff9a9a9a</color>
+    <color name="spinner_text_sel">#fff58220</color>
+    
+    <color name="spinner_sort_text">#fff78413</color>
+
+    <color name="primary">#63b050</color>
+    <color name="right_grey">#EEEEEE</color>
+</resources>

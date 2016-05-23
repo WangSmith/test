@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="http://schemas.android.com/tools">
+
+    <string name="app_name">DineUnite</string>
+    <string name="noname"></string>
+    <string name="invite_guest">I have a table, invite my guests</string>
+    <string name="find_table">Find me a table</string>
+    <string name="alert_ok">Ok</string>
+    <string name="loading">Loading...</string>
+    <string name="network_not_available">Network is not available, please check your network.</string>
+    
+    <string name="finish_message">Press again to exit</string>
+
+    <!-- Drawer Menu -->
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
+
+    <!-- Login Screen -->
+    <string name="login_hint">Login to your DineUnite account</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="forgot_password">Forgot Password?</string>
+
+    <string name="error_input_fields">Please input user data</string>
+    <string name="error_invalid_email">Email is invalid</string>
+
+    <!-- MainActivity -->
+    <string name="menu_social_tables">Social tables</string>
+    <string name="menu_restaurant_tables">Restaurant tables</string>
+    <string name="menu_find_me_a_dinner_partner">Find a dinner partner</string>
+    <string name="menu_dinner_events">Dinner events</string>
+    <string name="menu_dinner_matches">Dinner matches</string>
+    <string name="menu_invite_my_friends">Invite friends</string>
+    <string name="menu_my_profile">My profile</string>
+    <string name="menu_account_settings">Account settings</string>
+    <string name="menu_about_dineunite">About DineUnite</string>
+    
+    <!-- Find me a table -->
+    <string name="hint_select">SELECT</string>
+    <string name="hint_idrathernotsay">I\'d rather not say</string>
+    <string name="search">Search</string>
+    <string name="continue_title">Continue</string>
+    <string name="table_options_title">Your table options</string>
+    <string name="error_loading">Loading Error. Please try again later</string>
+    <string name="hint_search_location">Search location</string>
+    <string name="select_location">Select location</string>
+    <string name="error_select_where_you_will_be">Please select where you will be</string>
+    <string name="error_select_new_location">Please select new location</string>
+    <string name="error_turnon_location">Please turn on GPS and mobile network location</string>
+    <string name="error_select_time_of_day">Please select time of day</string>
+    <string name="error_select_guest_number">Please select the number of guests</string>
+    <string name="error_select_planned_date">Let us know when you need a table.</string>
+    <string name="error_find_tables">Oops! We couldn\'t find you the perfect table. Please change your search criteria.</string>
+    <string name="error_empry_tables">Oops! couldn\'t find you the perfect table. Please change your search criteria.</string>
+	<string name="error_get_formatted_address">Couldn\'t get address. Please try again</string>
+    
+    <!-- Location Setting -->
+    <string name="location_settings_title">Improve location setting</string>
+    <string name="location_settings">Settings</string>
+    <string name="location_instructions">To use current function:\n• Turn on GPS and mobile network location</string>
+    <!-- Time Setting -->
+    <string name="time_instructions">You have selected a date or time in the past.   Please try again.</string>
+    <string name="feeling_peckish">Feeling peckish?</string>
+    <string name="spontaneus_of_planned">Spontaneus or planned?</string>
+    <string name="time_of_day">Time of day</string>
+    <string name="how_many_guests_are_you_hosting">How many guests are you hosting?</string>
+    <string name="skint_or_mint">Skint or mint?</string>
+    <string name="contact_host_title">Contact host</string>
+    <string name="join_table">Book Seat</string>
+    <string name="book_table">Book Table</string>
+    <string name="success_book_table">Successfully booked your table</string>
+    <string name="failed_book_table">Failed booking your table</string>
+    <string name="success_join_table">Successfully booked your seat.</string>
+    <string name="failed_join_table">Failed book your seat.</string>
+    <string name="success_contact_host">We will let know the host that you wish to join their table.</string>
+    <string name="failed_contact_host">Failed request join</string>
+
+    <!-- Invite Guests -->
+    <string name="invite_guests_title">Invite Guests</string>
+    <string name="gender_title">GENDER</string>
+    <string name="male_title">Male</string>
+    <string name="female_title">Female</string>
+    <string name="age_title">AGE</string>
+    <string name="relationship_status_title">RELATIONSHIP STATUS</string>
+    <string name="user_is_lookingfor_title">USER IS LOOKING FOR</string>
+    <string name="distance_title">DISTANCE</string>
+    <string name="favourite_cuisine_title">FAVOURITE CUISINE</string>
+    <string name="ethnicity_title">ETHNICITY</string>
+    <string name="languages_title">LANGUAGE</string>
+    <string name="education_title">EDUCATION</string>
+    <string name="error_find_dinner_matches">Oops! We couldn\'t find dinner matches</string>
+    
+    <!-- Sharing -->
+    <string name="menu_share">Share</string>
+    <string name="share_subject">You have been Invited to DineUnite</string>
+    <string name="share_body">This is an invitation to join DineUnite. Sign up here:!\nhttps://www.dropbox.com/s/iss8omkvaaaoxei/DineUnite.apk?dl=0</string>
+	<string name="table_share_body_format">%1$s wants you to check out this table available from %2$s at %3$s. Join other guests with DineUnite. If you haven\’t done it already download the app here [link].\nhttps://www.dropbox.com/s/iss8omkvaaaoxei/DineUnite.apk?dl=0</string>
+    
+    <!-- Invite Guests -->
+    <string name="error_select_gender">Please select Gender option</string>
+    <string name="error_select_age">Please select Age</string>
+    <string name="error_select_distance">Please select Distance</string>
+    <string name="error_select_relationship">Please select Relationship option</string>
+    <string name="error_select_lookingfor">Please select Looking For option</string>
+
+    <!-- Dinner Events -->
+    <string name="failed_cancel_event">Failed cancel event</string>
+    <string name="anyone_can_join">Anyone can join</string>
+    <string name="guests_apply_to_join">Guests apply to join</string>
+    <string name="failed_accept_event">Failed accept</string>
+    
+    <!-- Profile Page -->
+    <string name="hint_add">ADD</string>
+    <string name="save_changes">SAVE CHANGES</string>
+    <!-- + -->
+    <!-- + -->
+    <string name="input_manatory_field">To use this function, please add mandatory fields in your Profile page</string>
+    
+    <string name="hint_firstname">First name</string>
+    <string name="hint_lastname">Last name</string>
+    <string name="hint_gender">Gender</string>
+    <string name="hint_aboutyou">About you</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_mobile">Mobile number</string>
+
+    <string name="error_add_firstname">Please add first name</string>
+    <string name="error_add_age">Please add age</string>
+    <string name="error_add_email">Please add email</string>
+    <string name="error_add_mobile">Please add mobile number</string>
+    <string name="error_add_home_address">Please add home address</string>
+    <string name="error_picture_upload">Picture Upload Error. Please try again.</string>
+    <string name="save_changes_successfully">Saved successfully</string>
+    <string name="failed_clear_profile_photo">Failed to clear profile photo</string>
+    
+    <!-- Dinner Matches -->
+    <string name="success_invite_guest">Successfully invited guest</string>
+    <string name="failed_invite_guest">Failed to invite guest</string>
+    
+    <!-- Invitation Page -->
+    <string name="invitation">INVITATION</string>
+    <string name="error_fill_message">Please input message</string>
+
+    <string name="mdtp_ok">@android:string/ok</string>
+    <string name="mdtp_cancel">@android:string/cancel</string>
+    <!--
+         Content description for the hour selector in the time picker, which displays
+         selectable hours of the day along the inside edge of a circle, as in an analog clock.
+         [CHAR LIMIT=50]
+    -->
+    <string name="mdtp_hour_picker_description">Hours circular slider</string>
+    <!--
+         Content description for the minute selector in the time picker, which displays
+         selectable five-minute intervals along the inside edge of a circle, as in an analog clock.
+         [CHAR LIMIT=50]
+    -->
+    <string name="mdtp_minute_picker_description">Minutes circular slider</string>
+    <!--
+         Content description for the second selector in the time picker, which displays
+         selectable five-second intervals along the inside edge of a circle, as in an analog clock.
+         [CHAR LIMIT=50]
+    -->
+    <string name="mdtp_second_picker_description">Seconds circular slider</string>
+    <!-- Accessibility announcement for hour circular picker [CHAR LIMIT=NONE] -->
+    <string name="mdtp_select_hours">Select hours</string>
+    <!-- Accessibility announcement for minute circular picker [CHAR LIMIT=NONE] -->
+    <string name="mdtp_select_minutes">Select minutes</string>
+    <!-- Accessibility announcement for second circular picker [CHAR LIMIT=NONE] -->
+    <string name="mdtp_select_seconds">Select seconds</string>
+
+    <!--
+        Content description for the month and day selector in the date picker, which displays
+        a selectable grid of days laid out by month.
+        [CHAR LIMIT=50]
+     -->
+    <string name="mdtp_day_picker_description">Month grid of days</string>
+    <!--
+        Content description for the year selector in the date picker, which displays
+        a scrolling, vertical list of years.
+        [CHAR LIMIT=50]
+     -->
+    <string name="mdtp_year_picker_description">Year list</string>
+    <!-- Accessibility announcement for the day picker [CHAR LIMIT=NONE] -->
+    <string name="mdtp_select_day">Select month and day</string>
+    <!-- Accessibility announcement for the year picker [CHAR LIMIT=NONE] -->
+    <string name="mdtp_select_year">Select year</string>
+    <!-- Accessibility description for the item that is currently selected. -->
+    <string name="mdtp_item_is_selected"><xliff:g id="item" example="2013">%1$s</xliff:g> selected</string>
+    <!-- Accessibility announcement when a number that had been typed in is deleted [CHAR_LIMIT=NONE] -->
+    <string name="mdtp_deleted_key"><xliff:g id="key" example="4">%1$s</xliff:g> deleted</string>
+
+    <!-- DO NOT TRANSLATE -->
+    <string name="mdtp_time_placeholder" translatable="false">--</string>
+    <!-- DO NOT TRANSLATE -->
+    <string name="mdtp_time_separator" translatable="false">:</string>
+
+    <!-- DO NOT TRANSLATE -->
+    <string name="mdtp_radial_numbers_typeface" translatable="false">sans-serif</string>
+    <!-- DO NOT TRANSLATE -->
+    <string name="mdtp_sans_serif" translatable="false">sans-serif</string>
+
+    <!-- DO NOT TRANSLATE -->
+    <string name="mdtp_day_of_week_label_typeface" translatable="false">sans-serif</string>
+    <string name="menu_my_dineunite_friends">My DineUnite friends</string>
+    <string name="menu_credits">Credits</string>
+    <string name="menu_exit">Exit</string>
+    <string name="cancel">CANCEL</string>
+
+</resources>

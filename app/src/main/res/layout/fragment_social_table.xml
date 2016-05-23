@@ -1,0 +1,81 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fbfbfb"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:padding="@dimen/padding_arround2" >
+        <Button
+            android:id="@+id/privateTablesBtn"
+            android:layout_width="125dip"
+            android:layout_height="match_parent"
+            android:background="@drawable/btn_cancel_event"
+            android:gravity="center"
+            android:minHeight="30dip"
+            android:text="Private tables"
+            android:textColor="@color/white"
+            android:layout_gravity="right"
+            android:textSize="@dimen/font_8" />
+        <TextView
+            android:id="@+id/queryTitleTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/padding_arround2"
+            android:layout_marginRight="@dimen/padding_arround2"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:text="Sort by:"
+            android:textColor="@color/spinner_sort_text"
+            android:textSize="@dimen/font_7"
+            android:textStyle="bold" />
+
+        <com.paulavasile.dineunite.views.CustomSpinner
+            android:id="@+id/sortList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/padding_arround1"
+            android:layout_marginRight="@dimen/padding_arround1"
+            android:background="@null"
+            android:gravity="center"
+            android:hint="@string/hint_select"
+            android:scrollbarSize="10dip"
+            android:scrollbarThumbVertical="@drawable/back_spinner_tail"
+            android:scrollbars="vertical" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/separator" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <ListView
+            android:id="@+id/infoLv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical"
+            android:dividerHeight="0dp"
+            android:divider="@null">
+
+        </ListView>
+
+        <com.paulavasile.dineunite.views.ResizableImageView
+            android:id="@+id/nodataIv"
+            android:layout_width="200dip"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="30dip"
+            android:src="@drawable/ic_nodata" />
+    </FrameLayout>
+</LinearLayout>

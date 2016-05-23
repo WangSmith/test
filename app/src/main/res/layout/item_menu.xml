@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_menu_item"
+        android:gravity="center_vertical" >
+
+        <FrameLayout
+            android:id="@+id/select_mark"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/menu_color_sel"
+            android:visibility="gone"
+            android:gravity="center_vertical" >
+
+            <View
+                android:layout_width="5px"
+                android:layout_height="match_parent"
+                android:layout_gravity="left"
+                android:background="@color/menu_color_mark" />
+
+            <com.paulavasile.dineunite.views.ResizableImageView
+                android:layout_width="10dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center_vertical"
+                android:src="@drawable/ic_menu_tail" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/padding_arround2" >
+
+            <ImageView
+                android:id="@+id/menuIv"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_gravity="right|center_vertical"
+                android:src="@drawable/ic_menu_news" />
+
+            <TextView
+                android:id="@+id/menuTitleTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/padding_arround3"
+                android:ellipsize="marquee"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:text="News"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_4" />
+        </LinearLayout>
+    </FrameLayout>
+
+</LinearLayout>

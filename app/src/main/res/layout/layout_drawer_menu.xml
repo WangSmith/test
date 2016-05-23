@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/top_bar_color"
+        android:padding="@dimen/padding_arround6" >
+
+        <com.paulavasile.dineunite.views.ResizableImageView
+            android:layout_width="100dip"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_logo_white" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/ic_menu_bottom_back" />
+
+        <ListView
+            android:id="@+id/menuList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:cacheColorHint="#00000000"
+            android:divider="@drawable/menu_list_divider"
+            android:scrollbars="none"
+            android:dividerHeight="1px" >
+        </ListView>
+
+        <com.paulavasile.dineunite.views.ResizableImageView
+            android:id="@+id/menu_tail"
+            android:layout_width="25dip"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|bottom"
+            android:padding="@dimen/padding_arround1"
+            android:src="@drawable/ic_menu_more" />
+    </FrameLayout>
+
+</LinearLayout>

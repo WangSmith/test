@@ -1,0 +1,89 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/topbar"
+        layout="@layout/topbar_profileinput" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/round_edge"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:layout_marginLeft="@dimen/padding_arround3"
+        android:layout_marginRight="@dimen/padding_arround3"
+        android:layout_marginTop="@dimen/padding_arround3"
+        android:paddingBottom="@dimen/padding_arround2"
+        android:paddingLeft="@dimen/padding_arround3"
+        android:paddingRight="@dimen/padding_arround3"
+        android:paddingTop="@dimen/padding_arround2" >
+
+        <LinearLayout
+            android:id="@+id/maleSelect"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/padding_arround2"
+            android:gravity="center_vertical" >
+
+            <TextView
+                android:id="@+id/maleTitleTv"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                android:singleLine="true"
+                android:text="@string/male_title"
+                android:textColor="@color/spinner_text"
+                android:textSize="@dimen/font_50" />
+
+            <CheckBox
+                android:id="@+id/maleRadio"
+                style="@style/RadioButtonStyle1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@drawable/ic_radio_bg"
+                android:checked="false"
+                android:clickable="false" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/separator" />
+
+        <LinearLayout
+            android:id="@+id/femaleSelect"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/padding_arround2"
+            android:gravity="center_vertical" >
+
+            <TextView
+                android:id="@+id/femaleTitleTv"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                android:singleLine="true"
+                android:text="@string/female_title"
+                android:textColor="@color/item_content"
+                android:textSize="@dimen/font_50" />
+
+            <CheckBox
+                android:id="@+id/femaleRadio"
+                style="@style/RadioButtonStyle1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@drawable/ic_radio_bg"
+                android:checked="false"
+                android:clickable="false" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

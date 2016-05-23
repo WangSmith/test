@@ -1,0 +1,102 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/padding_arround2"
+    android:paddingRight="@dimen/padding_arround2"
+    android:paddingTop="@dimen/padding_arround2" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/hostPictureIv"
+            android:layout_width="80dip"
+            android:layout_height="80dip"
+            android:scaleType="centerCrop"
+             />
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/padding_arround2"
+            android:layout_weight="0.1"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/hostNameTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="marquee"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:text="Andrea L"
+                android:textColor="@color/item_content"
+                android:textSize="@dimen/font_40"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/hostAgeTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dip"
+                android:drawablePadding="@dimen/padding_arround1"
+                android:ellipsize="marquee"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:text="19 years old"
+                android:textColor="@color/item_content"
+                android:textSize="@dimen/font_40" />
+
+            <TextView
+                android:id="@+id/relationshipStatusNameTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dip"
+                android:ellipsize="marquee"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:text="single"
+                android:textColor="@color/item_content"
+                android:textSize="@dimen/font_40" />
+
+            <TextView
+                android:id="@+id/lookingForNameTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dip"
+                android:ellipsize="marquee"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:text="Looking for friendship"
+                android:textColor="@color/item_content"
+                android:textSize="@dimen/font_40" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/invitationMsgTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/item_title"
+        android:layout_marginTop="@dimen/padding_arround1"
+        android:drawableLeft="@drawable/ic_invitation"
+        android:gravity="center_vertical"
+        android:padding="@dimen/padding_arround1"
+        android:drawablePadding="@dimen/padding_arround2"
+        android:hint="Invitation message here"
+        android:visibility="gone"
+        android:textSize="@dimen/font_40" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/separator"
+        android:visibility="gone" />
+
+</LinearLayout>

@@ -1,0 +1,279 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btnSearch"
+        android:layout_below="@+id/topbar"
+        android:visibility="visible" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/padding_arround3"
+                android:paddingRight="@dimen/padding_arround3"
+                android:paddingTop="@dimen/padding_arround3"
+                android:visibility="visible" >
+
+                <TextView
+                    android:id="@+id/placeOptionTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="marquee"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:text="Where will you be?"
+                    android:textAllCaps="true"
+                    android:textColor="@color/item_title"
+                    android:textSize="@dimen/font_28"
+                    android:textStyle="bold" />
+
+                <com.paulavasile.dineunite.views.NDSpinner
+                    android:id="@+id/whereList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:gravity="center"
+                    android:hint="@string/hint_select"
+                    android:paddingBottom="@dimen/padding_arround1"
+                    android:paddingTop="@dimen/padding_arround1" />
+
+                <TextView
+                    android:id="@+id/customAddressTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/padding_arround1"
+                    android:ellipsize="marquee"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/padding_arround2"
+                    android:singleLine="true"
+                    android:text="Detailed Address here"
+                    android:textColor="@color/item_content"
+                    android:textSize="@dimen/font_7"
+                    android:visibility="gone" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/separator" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/padding_arround3"
+                android:paddingRight="@dimen/padding_arround3"
+                android:paddingTop="@dimen/padding_arround3"
+                android:visibility="visible" >
+
+                <TextView
+                    android:id="@+id/feelingPeckishOptionTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="marquee"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:text="@string/feeling_peckish"
+                    android:textAllCaps="true"
+                    android:textColor="@color/item_title"
+                    android:textSize="@dimen/font_28"
+                    android:textStyle="bold" />
+
+                <com.paulavasile.dineunite.views.CustomSpinner
+                    android:id="@+id/feelingPeckishList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:gravity="center"
+                    android:hint="@string/hint_select"
+                    android:paddingBottom="@dimen/padding_arround1"
+                    android:paddingTop="@dimen/padding_arround1"
+                    android:scrollbarSize="10dip"
+                    android:scrollbarThumbVertical="@drawable/back_spinner_tail"
+                    android:scrollbars="vertical" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/separator" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/padding_arround3"
+                android:paddingRight="@dimen/padding_arround3"
+                android:paddingTop="@dimen/padding_arround3" >
+
+                <TextView
+                    android:id="@+id/plannedOptionTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="marquee"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:text="@string/spontaneus_of_planned"
+                    android:textAllCaps="true"
+                    android:textColor="@color/item_title"
+                    android:textSize="@dimen/font_28"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/plannedValueTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableRight="@drawable/ic_spinner_tail"
+                    android:ellipsize="marquee"
+                    android:gravity="center_vertical"
+                    android:padding="8dip"
+                    android:singleLine="true"
+                    android:text="@string/hint_select"
+                    android:textColor="@color/font_color_input"
+                    android:textSize="@dimen/font_5" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/separator" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/padding_arround3"
+                android:paddingRight="@dimen/padding_arround3"
+                android:paddingTop="@dimen/padding_arround3" >
+
+                <TextView
+                    android:id="@+id/timeOfDayOptionTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="marquee"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:text="@string/time_of_day"
+                    android:textAllCaps="true"
+                    android:textColor="@color/item_title"
+                    android:textSize="@dimen/font_28"
+                    android:textStyle="bold" />
+
+                <com.paulavasile.dineunite.views.CustomSpinner
+                    android:id="@+id/timeOfDayList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:gravity="center"
+                    android:hint="@string/hint_select"
+                    android:paddingBottom="@dimen/padding_arround1"
+                    android:paddingTop="@dimen/padding_arround1" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/separator" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/padding_arround3"
+                android:paddingRight="@dimen/padding_arround3"
+                android:paddingTop="@dimen/padding_arround3" >
+
+                <TextView
+                    android:id="@+id/guestsOptionTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="marquee"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:text="@string/how_many_guests_are_you_hosting"
+                    android:textAllCaps="true"
+                    android:textColor="@color/item_title"
+                    android:textSize="@dimen/font_28"
+                    android:textStyle="bold" />
+				
+                <com.paulavasile.dineunite.views.CustomSpinner
+                    android:id="@+id/guestOptionsList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:gravity="center"
+                    android:hint="@string/hint_select"
+                    android:paddingBottom="@dimen/padding_arround1"
+                    android:paddingTop="@dimen/padding_arround1" />
+                
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/separator" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/padding_arround3"
+                android:paddingRight="@dimen/padding_arround3"
+                android:paddingTop="@dimen/padding_arround3" >
+
+                <TextView
+                    android:id="@+id/skintOrMintOptionTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="marquee"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:text="@string/skint_or_mint"
+                    android:textAllCaps="true"
+                    android:textColor="@color/item_title"
+                    android:textSize="@dimen/font_28"
+                    android:textStyle="bold" />
+
+                <com.paulavasile.dineunite.views.CustomSpinner
+                    android:id="@+id/budgetTypeList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:gravity="center"
+                    android:hint="@string/hint_select"
+                    android:paddingBottom="@dimen/padding_arround1"
+                    android:paddingTop="@dimen/padding_arround1" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/separator" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btnSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/padding_arround4"
+        android:layout_marginLeft="@dimen/padding_arround4"
+        android:layout_marginRight="@dimen/padding_arround4"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/btn_login"
+        android:text="@string/search"
+        android:textAllCaps="true"
+        android:textColor="@color/white" />
+
+</RelativeLayout>

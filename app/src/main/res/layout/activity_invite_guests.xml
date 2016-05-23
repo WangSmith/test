@@ -1,0 +1,573 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:rsb="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <include
+        android:id="@+id/topbar"
+        layout="@layout/topbar_normal" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btnSearch"
+        android:layout_below="@+id/topbar"
+        android:visibility="visible" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/padding_arround3"
+                android:paddingRight="@dimen/padding_arround3"
+                android:paddingTop="@dimen/padding_arround3"
+                android:visibility="visible" >
+
+                <TextView
+                    android:id="@+id/genderOptionTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="marquee"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:text="@string/gender_title"
+                    android:textAllCaps="true"
+                    android:textColor="@color/item_title"
+                    android:textSize="@dimen/font_28"
+                    android:textStyle="bold" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <LinearLayout
+                        android:id="@+id/genderSelectPanel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/padding_arround1"
+                        android:orientation="vertical"
+                        android:visibility="visible" >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:background="@drawable/round_edge"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical"
+                            android:paddingBottom="@dimen/padding_arround2"
+                            android:paddingLeft="@dimen/padding_arround3"
+                            android:paddingRight="@dimen/padding_arround3"
+                            android:paddingTop="@dimen/padding_arround2" >
+
+                            <LinearLayout
+                                android:id="@+id/maleSelect"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginBottom="@dimen/padding_arround2"
+                                android:gravity="center_vertical" >
+
+                                <TextView
+                                    android:id="@+id/maleTitleTv"
+                                    android:layout_width="0dip"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.1"
+                                    android:singleLine="true"
+                                    android:text="@string/male_title"
+                                    android:textColor="@color/spinner_text"
+                                    android:textSize="@dimen/font_50" />
+
+                                <CheckBox
+                                    android:id="@+id/maleRadio"
+                                    style="@style/RadioButtonStyle1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:clickable="false"
+                                    android:checked="false"
+                                    android:button="@drawable/ic_radio_bg" />
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1px"
+                                android:background="@color/separator" />
+
+                            <LinearLayout
+                                android:id="@+id/femaleSelect"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="@dimen/padding_arround2"
+                                android:gravity="center_vertical" >
+
+                                <TextView
+                                    android:id="@+id/femaleTitleTv"
+                                    android:layout_width="0dip"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.1"
+                                    android:singleLine="true"
+                                    android:text="@string/female_title"
+                                    android:textColor="@color/item_content"
+                                    android:textSize="@dimen/font_50" />
+
+                                <CheckBox
+                                    android:id="@+id/femaleRadio"
+                                    style="@style/RadioButtonStyle1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:clickable="false"
+                                    android:checked="false"
+                                    android:button="@drawable/ic_radio_bg" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <ImageView
+                            android:id="@+id/genderContentTail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:paddingBottom="@dimen/padding_arround2"
+                            android:paddingLeft="@dimen/padding_arround2"
+                            android:paddingRight="@dimen/padding_arround2"
+                            android:paddingTop="@dimen/padding_arround2"
+                            android:src="@drawable/ic_spinner_tail_up" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/genderValueShowTv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/padding_arround1"
+                        android:drawableRight="@drawable/ic_spinner_tail"
+                        android:ellipsize="marquee"
+                        android:gravity="center_vertical"
+                        android:padding="@dimen/padding_arround2"
+                        android:singleLine="true"
+                        android:text="@string/hint_select"
+                        android:textColor="@color/font_color_input"
+                        android:textSize="@dimen/font_50" />
+                </FrameLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/separator" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/padding_arround3"
+                android:paddingRight="@dimen/padding_arround3"
+                android:paddingTop="@dimen/padding_arround3"
+                android:visibility="visible" >
+
+                <TextView
+                    android:id="@+id/ageTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="marquee"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:text="@string/age_title"
+                    android:textAllCaps="true"
+                    android:textColor="@color/item_title"
+                    android:textSize="@dimen/font_28"
+                    android:textStyle="bold" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/padding_arround1"
+                    android:paddingLeft="@dimen/padding_arround2"
+                    android:paddingRight="@dimen/padding_arround2" >
+
+                    <LinearLayout
+                        android:id="@+id/ageInputPanel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="visible" >
+
+                        <com.paulavasile.dineunite.views.RangeSeekBar
+                            android:id="@+id/ageSeekBar"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            rsb:absoluteMaxValue="64"
+                            rsb:absoluteMinValue="19" />
+
+                        <ImageView
+                            android:id="@+id/ageContentTail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:paddingBottom="@dimen/padding_arround2"
+                            android:paddingLeft="@dimen/padding_arround2"
+                            android:paddingTop="@dimen/padding_arround2"
+                            android:src="@drawable/ic_spinner_tail_up" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/ageValueShowTv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableRight="@drawable/ic_spinner_tail"
+                        android:ellipsize="marquee"
+                        android:paddingTop="@dimen/padding_arround2"
+                        android:paddingBottom="@dimen/padding_arround2"
+                        android:gravity="center_vertical"
+                        android:singleLine="true"
+                        android:text="@string/hint_select"
+                        android:textColor="@color/font_color_input"
+                        android:textSize="@dimen/font_50" />
+                </FrameLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/separator" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/padding_arround3"
+                android:paddingRight="@dimen/padding_arround3"
+                android:paddingTop="@dimen/padding_arround3"
+                android:visibility="visible" >
+
+                <TextView
+                    android:id="@+id/relationshipTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="marquee"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:text="@string/relationship_status_title"
+                    android:textAllCaps="true"
+                    android:textColor="@color/item_title"
+                    android:textSize="@dimen/font_28"
+                    android:textStyle="bold" />
+
+                <com.paulavasile.dineunite.views.CustomSpinner
+                    android:id="@+id/relationshipStatusList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:gravity="center"
+                    android:paddingLeft="2dip"
+                    android:paddingRight="2dip"
+                    android:hint="@string/hint_select"
+                    android:paddingBottom="@dimen/padding_arround1"
+                    android:paddingTop="@dimen/padding_arround1"
+                    android:scrollbarSize="10dip"
+                    android:scrollbarThumbVertical="@drawable/back_spinner_tail"
+                    android:scrollbars="vertical" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/separator" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/padding_arround3"
+                android:paddingRight="@dimen/padding_arround3"
+                android:paddingTop="@dimen/padding_arround3"
+                android:visibility="visible" >
+
+                <TextView
+                    android:id="@+id/lookingForTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="marquee"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:text="@string/user_is_lookingfor_title"
+                    android:textAllCaps="true"
+                    android:textColor="@color/item_title"
+                    android:textSize="@dimen/font_28"
+                    android:textStyle="bold" />
+
+                <com.paulavasile.dineunite.views.CustomSpinner
+                    android:id="@+id/lookingForList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:gravity="center"
+                    android:paddingLeft="2dip"
+                    android:paddingRight="2dip"
+                    android:hint="@string/hint_select"
+                    android:paddingBottom="@dimen/padding_arround1"
+                    android:paddingTop="@dimen/padding_arround1" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/separator" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/padding_arround3"
+                android:paddingRight="@dimen/padding_arround3"
+                android:paddingTop="@dimen/padding_arround3" >
+
+                <TextView
+                    android:id="@+id/distanceTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="marquee"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:text="@string/distance_title"
+                    android:textAllCaps="true"
+                    android:textColor="@color/item_title"
+                    android:textSize="@dimen/font_28"
+                    android:textStyle="bold" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/padding_arround2" >
+
+                    <TextView
+                        android:id="@+id/distanceValueShowTv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableRight="@drawable/ic_spinner_tail"
+                        android:ellipsize="marquee"
+                        android:gravity="center_vertical"
+                        android:singleLine="true"
+                        android:paddingTop="@dimen/padding_arround2"
+                        android:paddingBottom="@dimen/padding_arround2"
+                        android:text="@string/hint_select"
+                        android:textColor="@color/font_color_input"
+                        android:textSize="@dimen/font_50" />
+
+                    <LinearLayout
+                        android:id="@+id/distanceInputPanel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="visible" >
+
+                        <com.paulavasile.dineunite.views.RangeSeekBar
+                            android:id="@+id/distanceSeekBar"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            rsb:absoluteMaxValue="200"
+                            rsb:absoluteMinValue="1"
+                            rsb:surffix=" miles"
+                            rsb:singleThumb="true" />
+
+                        <ImageView
+                            android:id="@+id/distanceContentTail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:paddingBottom="@dimen/padding_arround2"
+                            android:paddingLeft="@dimen/padding_arround2"
+                            android:paddingTop="@dimen/padding_arround2"
+                            android:src="@drawable/ic_spinner_tail_up" />
+                    </LinearLayout>
+                </FrameLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/separator" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/padding_arround3"
+                android:paddingRight="@dimen/padding_arround3"
+                android:paddingTop="@dimen/padding_arround3"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/favouriteCuisineTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="marquee"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:text="@string/favourite_cuisine_title"
+                    android:textAllCaps="true"
+                    android:textColor="@color/item_title"
+                    android:textSize="@dimen/font_28"
+                    android:textStyle="bold" />
+
+                <com.paulavasile.dineunite.views.CustomSpinner
+                    android:id="@+id/favouriteCuisineList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:gravity="center"
+                    android:paddingLeft="2dip"
+                    android:paddingRight="2dip"
+                    android:hint="@string/hint_select"
+                    android:paddingBottom="@dimen/padding_arround1"
+                    android:paddingTop="@dimen/padding_arround1" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/separator" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/padding_arround3"
+                android:paddingRight="@dimen/padding_arround3"
+                android:paddingTop="@dimen/padding_arround3"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/ethnicityTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="marquee"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:text="@string/ethnicity_title"
+                    android:textAllCaps="true"
+                    android:textColor="@color/item_title"
+                    android:textSize="@dimen/font_28"
+                    android:textStyle="bold" />
+
+                <com.paulavasile.dineunite.views.CustomSpinner
+                    android:id="@+id/ethnicityList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:gravity="center"
+                    android:paddingLeft="2dip"
+                    android:paddingRight="2dip"
+                    android:hint="@string/hint_select"
+                    android:paddingBottom="@dimen/padding_arround1"
+                    android:paddingTop="@dimen/padding_arround1" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/separator" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/padding_arround3"
+                android:paddingRight="@dimen/padding_arround3"
+                android:paddingTop="@dimen/padding_arround3"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/lanuageTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="marquee"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:text="@string/languages_title"
+                    android:textAllCaps="true"
+                    android:textColor="@color/item_title"
+                    android:textSize="@dimen/font_28"
+                    android:textStyle="bold" />
+
+                <com.paulavasile.dineunite.views.CustomSpinner
+                    android:id="@+id/languageList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:gravity="center"
+                    android:paddingLeft="2dip"
+                    android:paddingRight="2dip"
+                    android:hint="@string/hint_select"
+                    android:paddingBottom="@dimen/padding_arround1"
+                    android:paddingTop="@dimen/padding_arround1" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/separator" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/padding_arround3"
+                android:paddingRight="@dimen/padding_arround3"
+                android:paddingTop="@dimen/padding_arround3"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/educationTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="marquee"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:text="@string/education_title"
+                    android:textAllCaps="true"
+                    android:textColor="@color/item_title"
+                    android:textSize="@dimen/font_28"
+                    android:textStyle="bold" />
+
+                <com.paulavasile.dineunite.views.CustomSpinner
+                    android:id="@+id/educationList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:gravity="center"
+                    android:paddingLeft="2dip"
+                    android:paddingRight="2dip"
+                    android:hint="@string/hint_select"
+                    android:paddingBottom="@dimen/padding_arround1"
+                    android:paddingTop="@dimen/padding_arround1" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/separator" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btnSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/padding_arround4"
+        android:layout_marginLeft="@dimen/padding_arround4"
+        android:layout_marginRight="@dimen/padding_arround4"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/btn_login"
+        android:text="@string/search"
+        android:textAllCaps="true"
+        android:textColor="@color/white" />
+
+</RelativeLayout>

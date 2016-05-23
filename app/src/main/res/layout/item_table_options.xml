@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/padding_arround1"
+    android:paddingRight="@dimen/padding_arround1"
+    android:paddingTop="@dimen/padding_arround1" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_block_back"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/padding_arround3"
+        android:paddingLeft="@dimen/padding_arround4"
+        android:paddingRight="@dimen/padding_arround4"
+        android:paddingTop="@dimen/padding_arround3" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <LinearLayout
+                    android:id="@+id/remainingDays"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/daysInfoTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1"
+                        android:textColor="@color/item_title"
+                        android:textSize="@dimen/font_40" />
+
+                    <TextView
+                        android:id="@+id/daysInfoTitleTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/padding_item"
+                        android:text="Day"
+                        android:textColor="@color/item_content"
+                        android:textSize="@dimen/font_40" />
+
+                    <TextView
+                        android:id="@+id/hoursInfoTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/padding_item"
+                        android:text="3"
+                        android:textColor="@color/item_title"
+                        android:textSize="@dimen/font_40" />
+
+                    <TextView
+                        android:id="@+id/hoursInfoTitleTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/padding_item"
+                        android:text="Hours"
+                        android:textColor="@color/item_content"
+                        android:textSize="@dimen/font_40" />
+
+                    <TextView
+                        android:id="@+id/minsInfoTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/padding_item"
+                        android:text="30"
+                        android:textColor="@color/item_title"
+                        android:textSize="@dimen/font_40" />
+
+                    <TextView
+                        android:id="@+id/minsInfoTitleTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/padding_item"
+                        android:text="Min"
+                        android:textColor="@color/item_content"
+                        android:textSize="@dimen/font_40" />
+                </LinearLayout>
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/tableStatusTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:gravity="right"
+                android:text="OPEN TABLE"
+                android:textColor="@color/item_title"
+                android:textSize="@dimen/font_40" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_arround2"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/dateTv"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                android:text="26 Feb 2016"
+                android:textColor="@color/item_content"
+                android:textSize="@dimen/font_40" />
+
+            <TextView
+                android:id="@+id/startTimeTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/padding_arround3"
+                android:layout_weight="0.1"
+                android:gravity="right"
+                android:text="20:00"
+                android:textColor="@color/item_content"
+                android:textSize="@dimen/font_40" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_arround1"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/restaurantDetailsTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableRight="@drawable/ic_spinner_tail_yellow"
+                android:ellipsize="marquee"
+                android:gravity="center_vertical"
+                android:paddingBottom="@dimen/padding_arround1"
+                android:paddingTop="@dimen/padding_arround1"
+                android:singleLine="true"
+                android:text="Restaurant Details"
+                android:textColor="@color/item_content"
+                android:textSize="@dimen/font_40" />
+
+            <LinearLayout
+                android:id="@+id/restaurantDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/separator" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/padding_arround2"
+                    android:layout_marginTop="@dimen/padding_arround2"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/durationTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dip"
+                        android:drawablePadding="@dimen/padding_arround1"
+                        android:drawableRight="@drawable/ic_time"
+                        android:ellipsize="marquee"
+                        android:gravity="center_vertical"
+                        android:singleLine="true"
+                        android:text="19:30 - 21:30"
+                        android:textColor="@color/item_content"
+                        android:textSize="@dimen/font_40"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/address1Tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dip"
+                        android:ellipsize="marquee"
+                        android:gravity="center_vertical"
+                        android:singleLine="true"
+                        android:text="54 Ledbury Road"
+                        android:textColor="@color/item_content"
+                        android:textSize="@dimen/font_40" />
+
+                    <TextView
+                        android:id="@+id/address2Tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dip"
+                        android:ellipsize="marquee"
+                        android:gravity="center_vertical"
+                        android:singleLine="true"
+                        android:text="London, W11 7LD"
+                        android:textColor="@color/item_content"
+                        android:textSize="@dimen/font_40" />
+                </LinearLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/padding_arround1"
+                    android:paddingRight="@dimen/padding_arround1"
+                    android:paddingTop="@dimen/padding_arround1" >
+
+                    <com.paulavasile.dineunite.views.ResizableImageView
+                        android:id="@+id/restaurantIv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_map_placeholder" />
+
+                    <com.paulavasile.dineunite.views.ResizableImageView
+                        android:id="@+id/directionBtn"
+                        android:layout_width="40dip"
+                        android:layout_height="40dip"
+                        android:layout_gravity="right|bottom"
+                        android:layout_marginBottom="5dip"
+                        android:layout_marginRight="5dip"
+                        android:clickable="true"
+                        android:src="@drawable/selector_map_direction" />
+                </FrameLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/yourHostPanel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_arround1"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/yourHostTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableRight="@drawable/ic_spinner_tail_yellow"
+                android:ellipsize="marquee"
+                android:gravity="center_vertical"
+                android:paddingBottom="@dimen/padding_arround1"
+                android:paddingTop="@dimen/padding_arround1"
+                android:singleLine="true"
+                android:text="See Host"
+                android:textColor="@color/item_content"
+                android:textSize="@dimen/font_40" />
+
+            <LinearLayout
+                android:id="@+id/yourHostDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/separator" />
+
+                <LinearLayout
+                    android:id="@+id/yourHostList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <include layout="@layout/item_dinner_event_host" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/guestsPanel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_arround1"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/guestsTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableRight="@drawable/ic_spinner_tail_yellow"
+                android:ellipsize="marquee"
+                android:gravity="center_vertical"
+                android:paddingBottom="@dimen/padding_arround1"
+                android:paddingTop="@dimen/padding_arround1"
+                android:singleLine="true"
+                android:text="See Guests"
+                android:textColor="@color/item_content"
+                android:textSize="@dimen/font_40" />
+
+            <LinearLayout
+                android:id="@+id/guestsDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/separator" />
+
+                <LinearLayout
+                    android:id="@+id/guestsListContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <include layout="@layout/item_dinner_event_guest" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/actionBtns"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_arround2"
+            android:orientation="horizontal" >
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/actionBtn"
+                    android:layout_width="125dip"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/padding_arround1"
+                    android:background="@drawable/btn_invite_guests"
+                    android:gravity="center"
+                    android:layout_gravity="center_vertical|left"
+                    android:minHeight="30dip"
+                    android:text="JOIN"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_8" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/seats_status"
+                    android:textColor="@color/item_content"
+                    android:textSize="@dimen/font_40"/>
+            </LinearLayout>
+
+            <com.paulavasile.dineunite.views.ResizableImageView
+                android:id="@+id/shareBtn"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:padding="@dimen/padding_arround1"
+                android:layout_gravity="right|center_vertical"
+                android:scaleType="centerCrop"
+                android:clickable="true"
+                android:src="@drawable/ic_share_grey" />
+        </FrameLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/padding_arround1"
+    android:paddingRight="@dimen/padding_arround1"
+    android:paddingTop="@dimen/padding_arround1" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_block_back"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/padding_arround3"
+        android:paddingLeft="@dimen/padding_arround4"
+        android:paddingRight="@dimen/padding_arround4"
+        android:paddingTop="@dimen/padding_arround3" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/firstnameTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="FirstName"
+                android:textColor="@color/item_content"
+                android:textSize="@dimen/font_40" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dip"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/hostPictureIv"
+                android:layout_width="80dip"
+                android:layout_height="80dip"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_avatar_placeholder" />
+
+            <LinearLayout
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/padding_arround2"
+                android:layout_weight="0.1"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/hostAgeTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dip"
+                    android:drawablePadding="@dimen/padding_arround1"
+                    android:ellipsize="marquee"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:text="19 years old"
+                    android:textColor="@color/item_content"
+                    android:textSize="@dimen/font_40" />
+
+                <TextView
+                    android:id="@+id/relationshipStatusNameTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dip"
+                    android:ellipsize="marquee"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:text="single"
+                    android:textColor="@color/item_content"
+                    android:textSize="@dimen/font_40" />
+
+                <TextView
+                    android:id="@+id/lookingForNameTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dip"
+                    android:ellipsize="marquee"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:text="Looking for friendship"
+                    android:textColor="@color/item_content"
+                    android:textSize="@dimen/font_40" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_arround1"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/aboutTitleTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableRight="@drawable/ic_spinner_tail_yellow"
+                android:ellipsize="marquee"
+                android:gravity="center_vertical"
+                android:paddingBottom="@dimen/padding_arround1"
+                android:paddingTop="@dimen/padding_arround1"
+                android:singleLine="true"
+                android:text="ABOUT"
+                android:textColor="@color/item_content"
+                android:textSize="@dimen/font_40" />
+
+            <LinearLayout
+                android:id="@+id/aboutDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/separator" />
+
+                <TextView
+                    android:id="@+id/descriptionTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dip"
+                    android:ellipsize="marquee"
+                    android:gravity="center_vertical"
+                    android:text="TEXT"
+                    android:background="@drawable/profile_input_back"
+                    android:padding="@dimen/padding_arround2"
+                    android:textColor="@color/item_content"
+                    android:textSize="@dimen/font_40" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/padding_arround1"
+                    android:orientation="vertical" >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:id="@+id/distanceLayout">
+                        <TextView
+                            android:id="@+id/distanceTitleTv"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dip"
+                            android:drawablePadding="@dimen/padding_arround1"
+                            android:ellipsize="marquee"
+                            android:gravity="center_vertical"
+                            android:singleLine="true"
+                            android:text="DISTANCE"
+                            android:textColor="@color/item_content"
+                            android:textSize="@dimen/font_40"
+                            android:layout_weight="1"
+                            android:layout_marginRight="5dip"/>
+                        <TextView
+                            android:id="@+id/distanceValueTv"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dip"
+                            android:drawablePadding="@dimen/padding_arround1"
+                            android:ellipsize="marquee"
+                            android:gravity="center_vertical"
+                            android:singleLine="true"
+                            android:text="30 miles"
+                            android:textColor="@color/item_content"
+                            android:textSize="@dimen/font_40"
+                            android:layout_weight="1"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:id="@+id/favoriteLayout">
+                        <TextView
+                            android:id="@+id/favouriteCuisineTitleTv"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dip"
+                            android:ellipsize="marquee"
+                            android:gravity="center_vertical"
+                            android:singleLine="true"
+                            android:text="FAVOURITE CUISINE"
+                            android:textColor="@color/item_content"
+                            android:textSize="@dimen/font_40"
+                            android:layout_weight="1"
+                            android:layout_marginRight="5dip"/>
+                        <TextView
+                            android:id="@+id/favouriteCuisineValueTv"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dip"
+                            android:ellipsize="marquee"
+                            android:gravity="center_vertical"
+                            android:singleLine="true"
+                            android:text="ANY"
+                            android:textColor="@color/item_content"
+                            android:textSize="@dimen/font_40"
+                            android:layout_weight="1"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:id="@+id/ethnicityLayout">
+                        <TextView
+                            android:id="@+id/ethnicityTitleTv"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dip"
+                            android:ellipsize="marquee"
+                            android:gravity="center_vertical"
+                            android:singleLine="true"
+                            android:text="ETHNICITY"
+                            android:textColor="@color/item_content"
+                            android:textSize="@dimen/font_40"
+                            android:layout_weight="1"
+                            android:layout_marginRight="5dip"/>
+                        <TextView
+                            android:id="@+id/ethnicityValueTv"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dip"
+                            android:ellipsize="marquee"
+                            android:gravity="center_vertical"
+                            android:singleLine="true"
+                            android:text="I'd rather not say"
+                            android:textColor="@color/item_content"
+                            android:textSize="@dimen/font_40"
+                            android:layout_weight="1"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:id="@+id/languageLayout">
+                        <TextView
+                            android:id="@+id/languageTitleTv"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dip"
+                            android:ellipsize="marquee"
+                            android:gravity="center_vertical"
+                            android:singleLine="true"
+                            android:text="LANGUAGE"
+                            android:textColor="@color/item_content"
+                            android:textSize="@dimen/font_40"
+                            android:layout_weight="1"
+                            android:layout_marginRight="5dip"/>
+                        <TextView
+                            android:id="@+id/languageValueTv"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dip"
+                            android:ellipsize="marquee"
+                            android:gravity="center_vertical"
+                            android:singleLine="true"
+                            android:text="English"
+                            android:textColor="@color/item_content"
+                            android:textSize="@dimen/font_40"
+                            android:layout_weight="1"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:id="@+id/educationLayout">
+                        <TextView
+                            android:id="@+id/educationTitleTv"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dip"
+                            android:ellipsize="marquee"
+                            android:gravity="center_vertical"
+                            android:singleLine="true"
+                            android:text="EDUCATION"
+                            android:textColor="@color/item_content"
+                            android:textSize="@dimen/font_40"
+                            android:layout_weight="1"
+                            android:layout_marginRight="5dip"/>
+                        <TextView
+                            android:id="@+id/educationValueTv"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dip"
+                            android:ellipsize="marquee"
+                            android:gravity="center_vertical"
+                            android:singleLine="true"
+                            android:text="I'd rather not say"
+                            android:textColor="@color/item_content"
+                            android:textSize="@dimen/font_40"
+                            android:layout_weight="1"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/actionBtns"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_arround2"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/inviteBtn"
+                android:layout_width="125dip"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_cancel_event"
+                android:gravity="center"
+                android:minHeight="30dip"
+                android:text="INVITE"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_8" />
+
+            <Button
+                android:id="@+id/saveBtn"
+                android:layout_width="125dip"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/padding_arround1"
+                android:background="@drawable/btn_invite_guests"
+                android:gravity="center"
+                android:minHeight="30dip"
+                android:text="SAVE"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_8" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

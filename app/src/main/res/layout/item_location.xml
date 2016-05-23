@@ -1,0 +1,54 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/item_catalogue_back"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/padding_arround2"
+    android:paddingRight="@dimen/padding_arround2"
+    android:paddingTop="@dimen/padding_arround2" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:layout_width="32dip"
+            android:layout_height="32dip"
+            android:layout_marginLeft="@dimen/padding_arround1"
+            android:contentDescription="@string/noname"
+            android:src="@drawable/ic_userlocation" />
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/padding_arround1"
+            android:layout_marginRight="@dimen/padding_arround2"
+            android:layout_weight="0.1"
+            android:gravity="center_vertical"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/locationNameTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="marquee"
+                android:gravity="center_vertical|left"
+                android:text="Location Name"
+                android:textColor="@color/item_content"
+                android:textSize="@dimen/font_5" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/separator"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginTop="@dimen/padding_arround1"
+        android:background="@color/separator" />
+
+</LinearLayout>
